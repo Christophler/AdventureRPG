@@ -1,6 +1,4 @@
-const prfManager = require("../profile/profile_manager");
 const json = require("./jsonutil");
-const { bot } = require("../app");
 
 const classTypes = json.classTypes;
 const settings = json.settings;
@@ -132,50 +130,39 @@ function getIdFromAt(arg) {
 	return id;
 }
 
-function getPartyEmbed(party, ownerUser) {
+function getPartyEmbed(party, ownerPrf, membersPrf, invitationsPrf) {
 	const embed = {
-		title: party.id,
-		description: "View your party with .party",
+		description: getAtFromId(ownerPrf.discordId) + "'s party\n",
 		color: 900000,
 		footer: {
-			text: "Power Level: " + party.powerLvl,
+			text: "View with .party | " + party.id,
 		},
 		author: {
-			name: ownerUser.toString(),
+			name: "Power Level: " + party.powerLvl,
 		},
-		fields: [
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-			{
-				name: "MemberX",
-				value: "ClassType",
-				inline: true,
-			},
-		],
+		fields: [],
 	};
+
+	embed.description += "```";
+	if (membersPrf.length == 0) {
+		embed.description += "Looks like it's just you and me in here..";
+	}
+	for (var i in membersPrf) {
+		const memberPrf = membersPrf[i];
+		const classType = getClassType(memberPrf.classTypeId);
+		embed.description += getAtFromId(memberPrf.discordId) + ": " + classType.name + "\n";
+	}
+	embed.description += "```";
+	if (invitationsPrf.length > 0) {
+		embed.description += "\nInvitations:\n";
+		for (var i in invitationsPrf) {
+			const invitationPrf = invitationsPrf[i];
+			const invAt = getAtFromId(invitationPrf.discordId);
+			const classType = getClassType(invitationPrf.classTypeId);
+			embed.description += invAt + ": " + classType.name;
+		}
+	}
+
 	return embed;
 }
 
