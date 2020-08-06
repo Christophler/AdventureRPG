@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const jsonutil = require("./utility/jsonutil");
-const party = require("./party/party");
+const partyManager = require("./party/party_manager");
 const prfManager = require("./profile/profile_manager");
 const settings = jsonutil.settings;
 
@@ -63,7 +63,7 @@ bot.on("message", (message) => {
 bot.on("ready", () => {
 	registerCommands();
 	prfManager.pullAllProfiles();
-	party.pull();
+	partyManager.pull();
 	console.log("Bot activated.");
 	bot.channels.fetch(settings.activationChannelId).then((channel) => {
 		channel.send("I am here and ready to simp");
@@ -73,4 +73,4 @@ bot.on("ready", () => {
 console.log("Loading...");
 bot.login(settings.token);
 
-module.exports.bot = bot;
+module.exports = bot;
