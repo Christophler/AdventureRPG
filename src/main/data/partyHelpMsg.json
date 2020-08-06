@@ -1,0 +1,40 @@
+{
+	"embed": {
+		"title": "Party Command",
+		"description": "Parties are for going into adventures with your friends!",
+		"color": 900000,
+		"footer": { "text": ".party | .p" },
+		"fields": [
+			{
+				"name": ".party help",
+				"value": "Open this message",
+				"inline": true
+			},
+			{
+				"name": ".party create",
+				"value": "Create a party instance",
+				"inline": true
+			},
+			{
+				"name": ".party invite <@user>",
+				"value": "Invite a player to a party",
+				"inline": true
+			},
+			{
+				"name": ".party join <@user>",
+				"value": "Join a party with the party leader's @",
+				"inline": true
+			},
+			{
+				"name": ".party leave",
+				"value": "Leave the current party you are in",
+				"inline": true
+			},
+			{
+				"name": ".party kick <@user>",
+				"value": "Kick a player from your party",
+				"inline": true
+			}
+		]
+	}
+}

@@ -1,0 +1,48 @@
+{
+  "inventory": [
+    {
+      "id": 0,
+      "name": "broken_sword",
+      "displayName": "Broken Sword",
+      "lore": "Scooby dooby doo, Where are you?",
+      "amount": 1,
+      "imageUrl": "https://i.imgur.com/18iu8x6.png",
+      "maxDurability": 100,
+      "durability": 100,
+      "minDamage": 400,
+      "maxDamage": 600
+    },
+    {
+      "id": 1,
+      "name": "broken_axe",
+      "displayName": "Broken Axe",
+      "lore": "This axe... is broken.",
+      "amount": 1,
+      "imageUrl": "https://i.imgur.com/L41deJN.png",
+      "maxDurability": 100,
+      "durability": 100,
+      "minDamage": 500,
+      "maxDamage": 750
+    },
+    {
+      "id": 2,
+      "name": "broken_bow",
+      "displayName": "Broken Bow",
+      "lore": "How does this thing even work?",
+      "amount": 1,
+      "imageUrl": "https://i.imgur.com/24Jv2Ok.png",
+      "maxDurability": 100,
+      "durability": 100,
+      "minDamage": 500,
+      "maxDamage": 600
+    }
+  ],
+  "inbox": [],
+  "discordId": "190968008242495488",
+  "discordTag": "Jeremy#7970",
+  "name": "x",
+  "xp": 0,
+  "hp": 300,
+  "defense": 100,
+  "classTypeId": 0
+}

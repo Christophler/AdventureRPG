@@ -1,0 +1,23 @@
+{
+	"knight": {
+		"id": 0,
+		"name": "Knight",
+		"hp": 300,
+		"defense": 100,
+		"avatar_url": "https://i.imgur.com/yKXlp35.png"
+	},
+	"tank": {
+		"id": 1,
+		"name": "Tank",
+		"hp": 500,
+		"defense": 250,
+		"avatar_url": "https://i.imgur.com/sOMWaRf.png"
+	},
+	"archer": {
+		"id": 2,
+		"name": "Archer",
+		"hp": 150,
+		"defense": 50,
+		"avatar_url": "https://i.imgur.com/B02vnOl.png"
+	}
+}
