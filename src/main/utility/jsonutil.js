@@ -13,7 +13,7 @@ function read(path) {
 module.exports.write = write;
 module.exports.read = read;
 
-const dataPath = "C:\\Users\\Jeremy_Mark\\Desktop\\AdventureGame\\src\\main\\data";
+const dataPath = "C:\\Users\\Jeremy_Mark\\Documents\\GitHub\\AdventureRPG\\src\\main\\data";
 module.exports.settings = this.read(dataPath + "\\settings.json");
 module.exports.classTypes = this.read(dataPath + "\\classTypes.json");
 module.exports.partyHelpMsg = read(dataPath + "\\partyHelpMsg.json");
