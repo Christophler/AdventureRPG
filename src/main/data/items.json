@@ -5,10 +5,10 @@
 			"type": "weapon",
 			"name": "broken_sword",
 			"displayName": "Broken Sword",
-			"lore": "Scooby dooby doo, Where are you?",
+			"lore": "At least I can throw the shards",
 			"image_url": "https://i.imgur.com/18iu8x6.png",
 			"minDamage": 400,
-			"maxDamage": 600,
+			"maxDamage": 450,
 			"maxDurability": 100
 		},
 		{
@@ -19,7 +19,7 @@
 			"lore": "This axe... is broken.",
 			"image_url": "https://i.imgur.com/L41deJN.png",
 			"minDamage": 500,
-			"maxDamage": 750,
+			"maxDamage": 550,
 			"maxDurability": 100
 		},
 		{
@@ -29,9 +29,20 @@
 			"displayName": "Broken Bow",
 			"lore": "How does this thing even work?",
 			"image_url": "https://i.imgur.com/24Jv2Ok.png",
-			"minDamage": 500,
-			"maxDamage": 600,
+			"minDamage": 450,
+			"maxDamage": 500,
 			"maxDurability": 100
+		},
+		{
+			"id": 3,
+			"type": "weapon",
+			"name": "dull_dagger",
+			"displayName": "Dull Dagger",
+			"lore": "I can't stab anything!",
+			"image_url": "https://i.imgur.com/KElMgr9.png",
+			"minDamage": 500,
+			"maxDamage": 550,
+			"maxDurability": 50
 		}
 	],
 	"itemTypes": ["weapon", "misc"]
